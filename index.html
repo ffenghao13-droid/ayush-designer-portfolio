@@ -105,7 +105,9 @@
     .video-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(42 * var(--t)) calc(24 * var(--t));max-width:calc(1180 * var(--u));margin:0 auto}
     .video-work{min-width:0;padding:calc(22 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.38);background:rgba(255,255,255,.11);-webkit-backdrop-filter:blur(calc(14 * var(--u)));backdrop-filter:blur(calc(14 * var(--u)));box-shadow:0 calc(18 * var(--u)) calc(48 * var(--u)) rgba(61,58,142,.16)}
     .video-work h3{margin:0 0 calc(12 * var(--t));font-family:'PlayD',serif;font-size:calc(29 * var(--t));font-weight:400;letter-spacing:calc(.3 * var(--t))}
-    .video-summary{margin:0 0 calc(18 * var(--t));font-family:'DMS',sans-serif;font-size:calc(14 * var(--t));line-height:1.75;color:rgba(255,255,255,.86)}
+    .video-script{margin:0 0 calc(18 * var(--t));padding:calc(16 * var(--t)) calc(18 * var(--t));border-left:calc(2 * var(--u)) solid rgba(255,255,255,.82);background:rgba(35,47,127,.16)}
+    .video-script-label{display:block;margin-bottom:calc(7 * var(--t));font-family:'DMS',sans-serif;font-size:calc(11 * var(--t));letter-spacing:calc(2.2 * var(--t));color:rgba(255,255,255,.68)}
+    .video-summary{margin:0;font-family:'DMS',sans-serif;font-size:calc(14 * var(--t));line-height:1.75;color:rgba(255,255,255,.9)}
     .video-work video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:rgba(82,71,159,.55);border:calc(1 * var(--u)) solid rgba(255,255,255,.52);box-shadow:0 calc(18 * var(--u)) calc(48 * var(--u)) rgba(61,58,142,.24)}
     .video-work.is-vertical video{aspect-ratio:9/16;max-height:calc(520 * var(--u));object-fit:contain}
     .video-assets{margin-top:calc(22 * var(--t))}.video-assets-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:calc(12 * var(--t));font-family:'DMS',sans-serif;font-size:calc(12 * var(--t));letter-spacing:calc(1.6 * var(--t));color:rgba(255,255,255,.72)}
@@ -473,6 +475,24 @@
           {title:'狂暴都市',src:'/videos-web/kuangbao-dushi.mp4',poster:'/videos/kuangbao-dushi.jpg',summary:'《狂暴都市》是一款末日都市题材的横版动作小游戏。玩家穿行于废弃加油站、旅馆、商店与地下设施，在昼夜交替的城市废墟中搜寻物资、解救幸存者，并对抗不断变异的感染者。项目以电影化横向场景、环境叙事与近身战斗为核心，营造资源匮乏、危机潜伏的末日生存体验。',assets:numberedAssets('kuangbao-dushi',8,1)}
         ]
       };
+      var episodeScripts = {
+        '海雾寻龙':'海雾突然封锁航路，寻龙者为调查失踪船只登上禁忌之船。船舱里留下的痕迹将他引向深海异动，龙影随即在浓雾中出现。就在他以为找到龙王踪迹时，一段被掩埋多年的往事浮出水面，本集结束在未知生物逼近船身的危机时刻。',
+        '听雨问刀':'雨夜竹林中，两名刀客循着脚步与雨声判断彼此方位。暗器穿过竹叶，刀光在闪电中短暂显现；双方不断试探，谁先暴露位置谁就会失去先机。雨势最急时，两人同时锁定对方，一场决定生死的正面对决随即爆发。',
+        '凡愚':'两人为查明禁地中的离奇死亡进入尘封秘境。少年靠近神像时意外触发法器，并与远方神域产生感应。空间裂隙在众人眼前开启，一名白衣女子从异界降临；她的出现唤醒了禁地中的力量，也让少年的真实身份出现新的疑点。',
+        '误入绮梦':'世子因一句“为伊消得人憔悴”迷上青楼女子，国公府后宅因此再起风波。女主追查诗句来历，发现对方接连说出不属于这个时代的词句。她设局试探，终于意识到府中可能还有另一位穿越者，而对方正在借世子的宠爱暗中布局。',
+        '外婆咖啡馆':'女孩照常经营外婆留下的咖啡馆，一位远道而来的客人拿着旧照片上门寻亲。两人从番批、汇单和照片中的地址逐条寻找线索，逐渐拼出四十年前那场离别。客人最终确认这里正是父亲记忆中的故乡，咖啡馆也再次等来了那封迟到多年的回信。',
+        '花果山大战':'血月之下，天兵攻破花果山，群妖倒在燃烧的山门前。孙悟空从废墟中起身，挥棒杀入天兵阵列，与巨灵神、李靖等人接连交锋。雷火撕裂夜空，他在重围中继续向前，只为替倒下的同伴讨回公道，决战由此进入最惨烈的阶段。',
+        '无极神剑':'两名剑者在幽林中争夺无极神剑，交锋惊醒了剑内沉睡的赤焰与寒霜双龙。火焰和冰潮轮番席卷山谷，双方都试图压制神剑的反噬。剑锋最终斩开阴阳交界，他们才发现神剑并非等待主人，而是在选择下一个献祭者。',
+        '等潮的人':'老人仍在海边等待那封迟到的回信，女孩的到来让他重新提起被海浪带走的往事。黑潮突然逼近岸边，群鸟惊飞，女孩被困在风暴之中。老人不顾劝阻驾船冲向海面，决定这一次无论付出什么代价，都不能让大海再次夺走他想守护的人。',
+        '云端天门':'意外发生后，女孩、爷爷和企鹅伙伴坠入云海，醒来时已身处一座悬浮的古老遗迹。他们沿残破石桥寻找出口，却发现远处金色天门正在缓缓开启。为了回家，三人必须赶在遗迹彻底苏醒前穿过天门，而守护古城的力量已经锁定了他们。',
+        'LAOFINA':'房车从炎热公路驶入雨雪与寒夜，车内温度随外界环境不断变化。LAOFINA 顶置空调启动，镜头依次展示压缩机、铜制冷媒管、气流循环、三档风速和精准风向调节。旅途回到安静舒适的车内空间，以“舒适一路随行”收束全片。',
+        '狂暴都市':'幸存者进入废弃城区，在加油站和商店搜寻物资，并救出被感染者围困的同伴。天色转暗后，队伍穿过旅馆与地下设施，遭遇更强的变异敌人。资源即将耗尽时，主角发动近身反击，打开新的撤离通道，也揭示城市深处仍潜伏着更大的威胁。'
+      };
+      Object.keys(videoWorks).forEach(function (category) {
+        videoWorks[category].forEach(function (work) {
+          if (episodeScripts[work.title]) work.summary = episodeScripts[work.title];
+        });
+      });
       function closeGallery() {
         videoGallery.querySelectorAll('video').forEach(function (video) { video.pause(); });
         videoGallery.classList.remove('is-open');
@@ -486,7 +506,7 @@
           var assets = (work.assets || []).map(function (asset, index) {
             return '<img loading="lazy" decoding="async" src="' + sourceBase + asset + '" alt="' + work.title + ' 项目资产 ' + String(index + 1).padStart(2,'0') + '">';
           }).join('');
-          return '<article class="video-work' + (work.vertical ? ' is-vertical' : '') + '"><h3>' + work.title + '</h3><p class="video-summary">' + work.summary + '</p><video controls playsinline preload="metadata" poster="' + sourceBase + work.poster + '" src="' + sourceBase + work.src + '"></video><section class="video-assets"><div class="video-assets-head"><span>项目资产</span><span>' + String(work.assets.length).padStart(2,'0') + '</span></div><div class="video-assets-track">' + assets + '</div></section></article>';
+          return '<article class="video-work' + (work.vertical ? ' is-vertical' : '') + '"><h3>' + work.title + '</h3><div class="video-script"><span class="video-script-label">本集剧本</span><p class="video-summary">' + work.summary + '</p></div><video controls playsinline preload="metadata" poster="' + sourceBase + work.poster + '" src="' + sourceBase + work.src + '"></video><section class="video-assets"><div class="video-assets-head"><span>项目资产</span><span>' + String(work.assets.length).padStart(2,'0') + '</span></div><div class="video-assets-track">' + assets + '</div></section></article>';
         }).join('');
         videoGallery.classList.add('is-open');
         videoGallery.setAttribute('aria-hidden','false');
