@@ -84,14 +84,17 @@
     .video-close:hover{background:rgba(255,255,255,.24);transform:rotate(8deg)}
     .video-close:focus-visible{outline:calc(2 * var(--u)) solid #fff;outline-offset:calc(3 * var(--u))}
     .video-categories{position:absolute;inset:calc(138 * var(--t)) calc(48 * var(--t)) calc(46 * var(--t));display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);gap:calc(18 * var(--t))}
-    .video-category{position:relative;overflow:hidden;border:calc(1 * var(--u)) solid rgba(255,255,255,.52);background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.09));box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.22),0 calc(16 * var(--u)) calc(44 * var(--u)) rgba(74,61,160,.12);backdrop-filter:blur(calc(18 * var(--u)));-webkit-backdrop-filter:blur(calc(18 * var(--u)));padding:calc(24 * var(--t));display:flex;flex-direction:column;justify-content:flex-end;text-align:left;color:#fff;font:inherit;cursor:pointer;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s ease,border-color .3s ease}
-    .video-category:hover{transform:translateY(calc(-5 * var(--t)));background:linear-gradient(145deg,rgba(255,255,255,.34),rgba(230,211,255,.14));border-color:rgba(255,255,255,.82)}
+    .video-category{position:relative;overflow:hidden;border:calc(1 * var(--u)) solid rgba(255,255,255,.52);background:rgba(72,91,190,.42);box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.22),0 calc(16 * var(--u)) calc(44 * var(--u)) rgba(74,61,160,.12);backdrop-filter:blur(calc(18 * var(--u)));-webkit-backdrop-filter:blur(calc(18 * var(--u)));padding:calc(24 * var(--t));display:flex;flex-direction:column;justify-content:flex-end;text-align:left;color:#fff;font:inherit;cursor:pointer;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s ease}
+    .video-category::before{content:"";position:absolute;inset:0;background-image:var(--cover);background-size:cover;background-position:center;transform:scale(1.015);transition:transform .6s cubic-bezier(.16,1,.3,1),filter .35s ease;filter:saturate(.88) contrast(.96)}
+    .video-category::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,35,105,.08) 10%,rgba(30,39,111,.22) 48%,rgba(19,26,83,.88) 100%)}
+    .video-category:hover{transform:translateY(calc(-5 * var(--t)));border-color:rgba(255,255,255,.9)}
+    .video-category:hover::before{transform:scale(1.06);filter:saturate(1.04) contrast(1)}
     .video-category:focus-visible{outline:calc(2 * var(--u)) solid #fff;outline-offset:calc(3 * var(--u))}
     .video-category:nth-child(1),.video-category:nth-child(2),.video-category:nth-child(3){grid-column:span 2}
     .video-category:nth-child(4){grid-column:2/span 2}.video-category:nth-child(5){grid-column:4/span 2}
-    .video-index{position:absolute;top:calc(20 * var(--t));left:calc(22 * var(--t));font-family:'DMS',sans-serif;font-size:calc(14 * var(--t));letter-spacing:calc(1.5 * var(--t));color:rgba(255,255,255,.78)}
-    .video-category h3{margin:0;font-family:'DMS',sans-serif;font-size:calc(36 * var(--t));font-weight:400;line-height:1.05;letter-spacing:calc(-1.2 * var(--t))}
-    .video-category p{margin:calc(10 * var(--t)) 0 0;font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(.5 * var(--t));color:rgba(255,255,255,.76)}
+    .video-index{position:absolute;z-index:1;top:calc(20 * var(--t));left:calc(22 * var(--t));font-family:'DMS',sans-serif;font-size:calc(14 * var(--t));letter-spacing:calc(1.5 * var(--t));color:rgba(255,255,255,.88);text-shadow:0 calc(2 * var(--u)) calc(10 * var(--u)) rgba(9,17,62,.4)}
+    .video-category h3{position:relative;z-index:1;margin:0;font-family:'DMS',sans-serif;font-size:calc(36 * var(--t));font-weight:400;line-height:1.05;letter-spacing:calc(-1.2 * var(--t));text-shadow:0 calc(3 * var(--u)) calc(18 * var(--u)) rgba(8,16,58,.62)}
+    .video-category p{position:relative;z-index:1;margin:calc(10 * var(--t)) 0 0;font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(.5 * var(--t));color:rgba(255,255,255,.82);text-shadow:0 calc(2 * var(--u)) calc(12 * var(--u)) rgba(8,16,58,.55)}
     .video-gallery{position:absolute;inset:0;z-index:3;background:radial-gradient(circle at 78% 12%,rgba(246,182,229,.45),transparent 30%),linear-gradient(145deg,rgba(47,111,240,.96),rgba(132,105,213,.94) 58%,rgba(223,165,221,.94));opacity:0;visibility:hidden;pointer-events:none;transform:translateY(calc(18 * var(--t)));transition:opacity .35s ease,transform .45s cubic-bezier(.16,1,.3,1),visibility 0s linear .45s;overflow-y:auto;overscroll-behavior:contain;padding:calc(32 * var(--t)) calc(44 * var(--t)) calc(60 * var(--t))}
     .video-gallery.is-open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition-delay:0s}
     .video-gallery-bar{position:sticky;top:calc(-32 * var(--t));z-index:2;display:flex;align-items:center;justify-content:space-between;padding:calc(18 * var(--t)) 0 calc(20 * var(--t));background:linear-gradient(to bottom,rgba(59,105,226,.98) 68%,transparent)}
@@ -294,11 +297,11 @@
         <button class="video-close" type="button" aria-label="关闭视频作品分类">×</button>
       </div>
       <div class="video-categories">
-        <button class="video-category" type="button" data-category="真人短剧"><span class="video-index">01</span><h3>真人短剧</h3><p>LIVE-ACTION SHORTS</p></button>
-        <button class="video-category" type="button" data-category="漫剧"><span class="video-index">02</span><h3>漫剧</h3><p>ANIMATED DRAMA</p></button>
-        <button class="video-category" type="button" data-category="海外短剧"><span class="video-index">03</span><h3>海外短剧</h3><p>GLOBAL SHORTS</p></button>
-        <button class="video-category" type="button" data-category="TVC 广告"><span class="video-index">04</span><h3>TVC 广告</h3><p>COMMERCIAL FILMS</p></button>
-        <button class="video-category" type="button" data-category="小游戏"><span class="video-index">05</span><h3>小游戏</h3><p>MINI GAMES</p></button>
+        <button class="video-category" type="button" data-category="真人短剧" style="--cover:url('https://manju.ffenghao13.site/videos/haiwu-xunlong-1.jpg')"><span class="video-index">01</span><h3>真人短剧</h3><p>LIVE-ACTION SHORTS</p></button>
+        <button class="video-category" type="button" data-category="漫剧" style="--cover:url('https://manju.ffenghao13.site/videos/huaguoshan-dazhan.jpg')"><span class="video-index">02</span><h3>漫剧</h3><p>ANIMATED DRAMA</p></button>
+        <button class="video-category" type="button" data-category="海外短剧" style="--cover:url('https://manju.ffenghao13.site/videos/dengchao-de-ren.jpg')"><span class="video-index">03</span><h3>海外短剧</h3><p>GLOBAL SHORTS</p></button>
+        <button class="video-category" type="button" data-category="TVC 广告" style="--cover:url('https://manju.ffenghao13.site/videos/laofina-fangche.jpg')"><span class="video-index">04</span><h3>TVC 广告</h3><p>COMMERCIAL FILMS</p></button>
+        <button class="video-category" type="button" data-category="小游戏" style="--cover:url('https://manju.ffenghao13.site/videos/kuangbao-dushi.jpg')"><span class="video-index">05</span><h3>小游戏</h3><p>MINI GAMES</p></button>
       </div>
       <div class="video-gallery" id="video-gallery" aria-hidden="true">
         <div class="video-gallery-bar"><button class="video-gallery-back" type="button">← 返回分类</button><span class="video-gallery-count"></span></div>
