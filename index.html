@@ -152,7 +152,7 @@
     .design-sections{display:none;gap:calc(18 * var(--t))}.design-sections.is-open{display:grid}.design-back{justify-self:start;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:calc(18 * var(--t));padding:calc(10 * var(--t)) calc(17 * var(--t));font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(.5 * var(--t));cursor:pointer;box-shadow:inset 0 0 0 calc(1 * var(--u)) rgba(255,255,255,.4);transition:background .2s ease,transform .2s ease}.design-back:hover{background:rgba(255,255,255,.25);transform:translateX(calc(-2 * var(--t)))}.design-section{display:none;min-width:0;padding:calc(22 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.42);background:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,.08));box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.24),0 calc(18 * var(--u)) calc(48 * var(--u)) rgba(62,61,153,.14);-webkit-backdrop-filter:blur(calc(18 * var(--u)));backdrop-filter:blur(calc(18 * var(--u)));border-radius:calc(20 * var(--u))}.design-section.is-active{display:block}
     .design-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:calc(20 * var(--t));margin-bottom:calc(15 * var(--t))}.design-section h3{margin:0;font-family:'PlayD',serif;font-size:calc(32 * var(--t));font-weight:400;line-height:1}.design-section-meta{font-family:'DMS',sans-serif;font-size:calc(11 * var(--t));letter-spacing:calc(2 * var(--t));color:rgba(255,255,255,.68)}
     .design-track{position:relative;overflow:hidden}.design-track figure{display:none;margin:0}.design-track figure.is-active{display:block;animation:design-page-in .38s cubic-bezier(.16,1,.3,1)}.design-track img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:calc(1 * var(--u)) solid rgba(255,255,255,.58);border-radius:calc(12 * var(--u));background:rgba(255,255,255,.12);box-shadow:0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(60,55,145,.18)}.design-track figcaption{margin-top:calc(9 * var(--t));font-family:'DMS',sans-serif;font-size:calc(12 * var(--t));letter-spacing:calc(.5 * var(--t));color:rgba(255,255,255,.78)}
-    .poster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(13 * var(--t));overflow:visible}.poster-grid figure{display:block;min-width:0}.poster-grid img.poster-crop{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border:0;border-radius:0;background:transparent;box-shadow:0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(60,55,145,.18)}
+    .poster-grid,.illustration-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(13 * var(--t));overflow:visible}.poster-grid figure,.illustration-grid figure{display:block;min-width:0}.poster-grid img.poster-crop,.illustration-grid img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border:0;border-radius:0;background:transparent;box-shadow:0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(60,55,145,.18)}
     @keyframes design-page-in{from{opacity:.25;transform:translateX(calc(18 * var(--t)))}to{opacity:1;transform:translateX(0)}}
     .design-pager{display:grid;grid-template-columns:calc(44 * var(--t)) 1fr calc(44 * var(--t));align-items:center;gap:calc(12 * var(--t));margin-top:calc(14 * var(--t))}.design-page-button{display:grid;place-items:center;width:calc(44 * var(--t));height:calc(36 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.58);border-radius:calc(18 * var(--t));background:rgba(255,255,255,.14);color:#fff;font-family:'DMS',sans-serif;font-size:calc(20 * var(--t));line-height:1;cursor:pointer;transition:background .2s ease,transform .2s ease}.design-page-button:hover:not(:disabled){background:rgba(255,255,255,.28);transform:translateY(calc(-2 * var(--t)))}.design-page-button:disabled{opacity:.32;cursor:default}.design-page-button:focus-visible{outline:calc(2 * var(--u)) solid #fff;outline-offset:calc(3 * var(--u))}.design-page-status{text-align:center;font-family:'DMS',sans-serif;font-size:calc(12 * var(--t));letter-spacing:calc(2 * var(--t));color:rgba(255,255,255,.78)}
 
@@ -282,7 +282,7 @@
               <figure><img loading="lazy" decoding="async" src="design-assets/10.png" alt="桃园潮义社场景传播与空间应用"><figcaption>桃园潮义社 · 场景应用</figcaption></figure>
             </div>
           </section>
-          <section class="design-section is-poster-grid" data-design-section="海报">
+          <section class="design-section is-static-grid" data-design-section="海报">
             <div class="design-section-head"><h3>海报</h3><span class="design-section-meta">POSTER · 08</span></div>
             <div class="design-track poster-grid">
               <figure><img class="poster-crop" loading="lazy" decoding="async" src="design-assets/posters/poster-clean-01.png" alt="THE EDGE 创意海报"></figure>
@@ -304,10 +304,13 @@
               <figure><img loading="lazy" decoding="async" src="design-assets/17.png" alt="植树节活动视觉设计"><figcaption>植树节活动视觉</figcaption></figure>
             </div>
           </section>
-          <section class="design-section" data-design-section="插画">
+          <section class="design-section is-static-grid" data-design-section="插画">
             <div class="design-section-head"><h3>插画</h3><span class="design-section-meta">ILLUSTRATION · 01</span></div>
-            <div class="design-track">
-              <figure><img loading="lazy" decoding="async" src="design-assets/15.png" alt="文创天文国风自然插画设计"><figcaption>文创、天文、国风与自然插画</figcaption></figure>
+            <div class="design-track illustration-grid">
+              <figure><img loading="lazy" decoding="async" src="design-assets/illustrations/illustration-01.webp" alt="文创国风插画"></figure>
+              <figure><img loading="lazy" decoding="async" src="design-assets/illustrations/illustration-02.webp" alt="天文馆插画"></figure>
+              <figure><img loading="lazy" decoding="async" src="design-assets/illustrations/illustration-03.webp" alt="国风节气插画"></figure>
+              <figure><img loading="lazy" decoding="async" src="design-assets/illustrations/illustration-04.webp" alt="自然科普插画"></figure>
             </div>
           </section>
         </div>
@@ -445,7 +448,7 @@
       var designSections = document.querySelector('.design-sections');
       var designBack = document.querySelector('.design-back');
       document.querySelectorAll('.design-section').forEach(function (section) {
-        if (section.classList.contains('is-poster-grid')) return;
+        if (section.classList.contains('is-static-grid')) return;
         var pages = Array.from(section.querySelectorAll('.design-track figure'));
         var current = 0;
         var pager = document.createElement('div');
