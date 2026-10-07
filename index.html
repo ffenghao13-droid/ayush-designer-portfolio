@@ -146,7 +146,10 @@
     .design-head>div::before{content:"";position:absolute;left:0;top:calc(2 * var(--t));bottom:calc(2 * var(--t));width:calc(3 * var(--u));border-radius:calc(3 * var(--u));background:linear-gradient(180deg,#fff 0%,rgba(255,209,245,.82) 100%);box-shadow:0 0 calc(18 * var(--u)) rgba(255,255,255,.38)}
     .design-kicker{display:block;font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(3 * var(--t));color:rgba(255,255,255,.76);margin-bottom:calc(5 * var(--t))}.design-title{margin:0;font-family:'PlayD',serif;font-size:calc(42 * var(--t));font-weight:400;line-height:1}
     .design-close{display:grid;place-items:center;width:calc(40 * var(--t));height:calc(40 * var(--t));border:0;border-radius:50%;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 calc(1 * var(--u)) rgba(255,255,255,.48),0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(50,47,135,.18);-webkit-backdrop-filter:blur(calc(14 * var(--u)));backdrop-filter:blur(calc(14 * var(--u)));color:rgba(255,255,255,.92);font-family:'DMS',sans-serif;font-size:calc(23 * var(--t));line-height:1;cursor:pointer;transition:background .2s ease,transform .2s ease}.design-close:hover{background:rgba(255,255,255,.25);transform:rotate(8deg) scale(1.04)}.design-close:focus-visible{outline:calc(2 * var(--u)) solid #fff;outline-offset:calc(3 * var(--u))}
-    .design-sections{display:grid;gap:calc(34 * var(--t))}.design-section{min-width:0;padding:calc(22 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.42);background:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,.08));box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.24),0 calc(18 * var(--u)) calc(48 * var(--u)) rgba(62,61,153,.14);-webkit-backdrop-filter:blur(calc(18 * var(--u)));backdrop-filter:blur(calc(18 * var(--u)));border-radius:calc(20 * var(--u))}
+    .design-categories{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,minmax(calc(190 * var(--t)),1fr));gap:calc(18 * var(--t));min-height:calc(520 * var(--t))}.design-categories[hidden]{display:none}
+    .design-category{position:relative;overflow:hidden;grid-column:span 2;padding:calc(25 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.5);border-radius:calc(18 * var(--u));background:linear-gradient(145deg,rgba(255,255,255,.23),rgba(255,255,255,.08));box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.22),0 calc(16 * var(--u)) calc(42 * var(--u)) rgba(62,61,153,.14);-webkit-backdrop-filter:blur(calc(18 * var(--u)));backdrop-filter:blur(calc(18 * var(--u)));display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;color:#fff;text-align:left;font:inherit;cursor:pointer;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s ease,border-color .3s ease}
+    .design-category:nth-child(4){grid-column:2/span 2}.design-category:nth-child(5){grid-column:4/span 2}.design-category::before{content:attr(data-index);position:absolute;top:calc(20 * var(--t));left:calc(23 * var(--t));font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(1.8 * var(--t));color:rgba(255,255,255,.7)}.design-category::after{content:"";position:absolute;right:calc(-35 * var(--t));bottom:calc(-58 * var(--t));width:calc(150 * var(--t));height:calc(150 * var(--t));border-radius:50%;background:radial-gradient(circle,rgba(255,219,244,.28),transparent 68%);transition:transform .35s ease}.design-category:hover{transform:translateY(calc(-5 * var(--t)));background:linear-gradient(145deg,rgba(255,255,255,.32),rgba(255,255,255,.12));border-color:rgba(255,255,255,.82)}.design-category:hover::after{transform:scale(1.25)}.design-category:focus-visible{outline:calc(2 * var(--u)) solid #fff;outline-offset:calc(3 * var(--u))}.design-category h3{position:relative;z-index:1;margin:0;font-family:'PlayD',serif;font-size:calc(39 * var(--t));font-weight:400;line-height:1}.design-category span{position:relative;z-index:1;margin-top:calc(9 * var(--t));font-family:'DMS',sans-serif;font-size:calc(11 * var(--t));letter-spacing:calc(1.8 * var(--t));color:rgba(255,255,255,.7)}
+    .design-sections{display:none;gap:calc(18 * var(--t))}.design-sections.is-open{display:grid}.design-back{justify-self:start;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:calc(18 * var(--t));padding:calc(10 * var(--t)) calc(17 * var(--t));font-family:'DMS',sans-serif;font-size:calc(13 * var(--t));letter-spacing:calc(.5 * var(--t));cursor:pointer;box-shadow:inset 0 0 0 calc(1 * var(--u)) rgba(255,255,255,.4);transition:background .2s ease,transform .2s ease}.design-back:hover{background:rgba(255,255,255,.25);transform:translateX(calc(-2 * var(--t)))}.design-section{display:none;min-width:0;padding:calc(22 * var(--t));border:calc(1 * var(--u)) solid rgba(255,255,255,.42);background:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,.08));box-shadow:inset 0 calc(1 * var(--u)) 0 rgba(255,255,255,.24),0 calc(18 * var(--u)) calc(48 * var(--u)) rgba(62,61,153,.14);-webkit-backdrop-filter:blur(calc(18 * var(--u)));backdrop-filter:blur(calc(18 * var(--u)));border-radius:calc(20 * var(--u))}.design-section.is-active{display:block}
     .design-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:calc(20 * var(--t));margin-bottom:calc(15 * var(--t))}.design-section h3{margin:0;font-family:'PlayD',serif;font-size:calc(32 * var(--t));font-weight:400;line-height:1}.design-section-meta{font-family:'DMS',sans-serif;font-size:calc(11 * var(--t));letter-spacing:calc(2 * var(--t));color:rgba(255,255,255,.68)}
     .design-track{position:relative;overflow:hidden}.design-track figure{display:none;margin:0}.design-track figure.is-active{display:block;animation:design-page-in .38s cubic-bezier(.16,1,.3,1)}.design-track img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border:calc(1 * var(--u)) solid rgba(255,255,255,.58);border-radius:calc(12 * var(--u));background:rgba(255,255,255,.12);box-shadow:0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(60,55,145,.18)}.design-track figcaption{margin-top:calc(9 * var(--t));font-family:'DMS',sans-serif;font-size:calc(12 * var(--t));letter-spacing:calc(.5 * var(--t));color:rgba(255,255,255,.78)}
     @keyframes design-page-in{from{opacity:.25;transform:translateX(calc(18 * var(--t)))}to{opacity:1;transform:translateX(0)}}
@@ -208,7 +211,7 @@
       .video-list{grid-template-columns:1fr;gap:calc(30 * var(--t))}
       .video-work{padding:calc(16 * var(--t))}.video-script{min-height:0}.video-summary{font-size:calc(13.5 * var(--t));line-height:1.65}.video-assets-track{grid-auto-columns:76%}
       .profile-shell{width:calc(100% - 36 * var(--t));padding-top:calc(22 * var(--t))}.profile-title{font-size:calc(36 * var(--t))}.profile-layout{grid-template-columns:1fr;gap:calc(16 * var(--t))}.profile-card{position:relative;top:0;display:grid;grid-template-columns:minmax(calc(120 * var(--t)),32%) 1fr;gap:calc(18 * var(--t));align-items:start}.profile-photo{grid-row:1/span 4}.profile-name{margin-top:calc(6 * var(--t));font-size:calc(34 * var(--t))}.profile-role{margin:calc(10 * var(--t)) 0}.profile-contact{padding-top:calc(12 * var(--t))}.profile-note{grid-column:1/-1;margin-top:0}.experience-card{padding:calc(22 * var(--t))}.job{grid-template-columns:1fr;gap:calc(9 * var(--t))}.job-main h4{font-size:calc(20 * var(--t))}
-      .design-shell{width:calc(100% - 32 * var(--t));padding-top:calc(22 * var(--t))}.design-title{font-size:calc(36 * var(--t))}.design-head{margin-bottom:calc(22 * var(--t))}.design-sections{gap:calc(20 * var(--t))}.design-section{padding:calc(16 * var(--t))}.design-section h3{font-size:calc(28 * var(--t))}.design-pager{margin-top:calc(12 * var(--t))}
+      .design-shell{width:calc(100% - 32 * var(--t));padding-top:calc(22 * var(--t))}.design-title{font-size:calc(36 * var(--t))}.design-head{margin-bottom:calc(22 * var(--t))}.design-categories{grid-template-columns:1fr;grid-template-rows:none;min-height:0}.design-category,.design-category:nth-child(4),.design-category:nth-child(5){grid-column:1;min-height:calc(140 * var(--t))}.design-category h3{font-size:calc(31 * var(--t))}.design-sections{gap:calc(20 * var(--t))}.design-section{padding:calc(16 * var(--t))}.design-section h3{font-size:calc(28 * var(--t))}.design-pager{margin-top:calc(12 * var(--t))}
     }
     @media (prefers-reduced-motion:reduce){
       *{transition-duration:.001ms !important;animation-duration:.001ms !important}
@@ -251,8 +254,16 @@
           <div><span class="design-kicker">SELECTED DESIGN WORKS</span><h2 class="design-title" id="design-panel-title">设计作品</h2></div>
           <button class="design-close" type="button" aria-label="关闭设计作品">×</button>
         </div>
+        <div class="design-categories">
+          <button class="design-category" type="button" data-design-category="品牌" data-index="01"><h3>品牌</h3><span>BRANDING · 04</span></button>
+          <button class="design-category" type="button" data-design-category="IP" data-index="02"><h3>IP</h3><span>IP DESIGN · 04</span></button>
+          <button class="design-category" type="button" data-design-category="海报" data-index="03"><h3>海报</h3><span>POSTER · 02</span></button>
+          <button class="design-category" type="button" data-design-category="Banner" data-index="04"><h3>Banner</h3><span>BANNER · 04</span></button>
+          <button class="design-category" type="button" data-design-category="插画" data-index="05"><h3>插画</h3><span>ILLUSTRATION · 01</span></button>
+        </div>
         <div class="design-sections">
-          <section class="design-section">
+          <button class="design-back" type="button">← 返回分类</button>
+          <section class="design-section" data-design-section="品牌">
             <div class="design-section-head"><h3>品牌</h3><span class="design-section-meta">BRANDING · 04</span></div>
             <div class="design-track">
               <figure><img loading="lazy" decoding="async" src="design-assets/3.png" alt="未晞品牌概念"><figcaption>未晞 · 品牌概念</figcaption></figure>
@@ -261,7 +272,7 @@
               <figure><img loading="lazy" decoding="async" src="design-assets/6.png" alt="未晞品牌应用"><figcaption>未晞 · 品牌应用</figcaption></figure>
             </div>
           </section>
-          <section class="design-section">
+          <section class="design-section" data-design-section="IP">
             <div class="design-section-head"><h3>IP</h3><span class="design-section-meta">IP DESIGN · 04</span></div>
             <div class="design-track">
               <figure><img loading="lazy" decoding="async" src="design-assets/7.png" alt="桃园潮义社IP定位"><figcaption>桃园潮义社 · IP 定位</figcaption></figure>
@@ -270,14 +281,14 @@
               <figure><img loading="lazy" decoding="async" src="design-assets/10.png" alt="桃园潮义社场景传播与空间应用"><figcaption>桃园潮义社 · 场景应用</figcaption></figure>
             </div>
           </section>
-          <section class="design-section">
+          <section class="design-section" data-design-section="海报">
             <div class="design-section-head"><h3>海报</h3><span class="design-section-meta">POSTER · 02</span></div>
             <div class="design-track">
               <figure><img loading="lazy" decoding="async" src="design-assets/11.png" alt="创意主题海报设计"><figcaption>创意主题海报</figcaption></figure>
               <figure><img loading="lazy" decoding="async" src="design-assets/12.png" alt="商业主题海报设计"><figcaption>商业主题海报</figcaption></figure>
             </div>
           </section>
-          <section class="design-section">
+          <section class="design-section" data-design-section="Banner">
             <div class="design-section-head"><h3>Banner</h3><span class="design-section-meta">BANNER · 04</span></div>
             <div class="design-track">
               <figure><img loading="lazy" decoding="async" src="design-assets/13.png" alt="餐饮文旅数码Banner设计"><figcaption>餐饮、文旅与数码视觉</figcaption></figure>
@@ -286,7 +297,7 @@
               <figure><img loading="lazy" decoding="async" src="design-assets/17.png" alt="植树节活动视觉设计"><figcaption>植树节活动视觉</figcaption></figure>
             </div>
           </section>
-          <section class="design-section">
+          <section class="design-section" data-design-section="插画">
             <div class="design-section-head"><h3>插画</h3><span class="design-section-meta">ILLUSTRATION · 01</span></div>
             <div class="design-track">
               <figure><img loading="lazy" decoding="async" src="design-assets/15.png" alt="文创天文国风自然插画设计"><figcaption>文创、天文、国风与自然插画</figcaption></figure>
@@ -423,6 +434,9 @@
       var designPanel = document.getElementById('design-panel');
       var designLink = document.querySelector('.nav a[href="#design"]');
       var designClose = document.querySelector('.design-close');
+      var designCategories = document.querySelector('.design-categories');
+      var designSections = document.querySelector('.design-sections');
+      var designBack = document.querySelector('.design-back');
       document.querySelectorAll('.design-section').forEach(function (section) {
         var pages = Array.from(section.querySelectorAll('.design-track figure'));
         var current = 0;
@@ -447,6 +461,28 @@
         prev.addEventListener('click', function () { showPage(current - 1); });
         next.addEventListener('click', function () { showPage(current + 1); });
         showPage(0);
+      });
+      function closeDesignCategory() {
+        designSections.classList.remove('is-open');
+        designSections.querySelectorAll('.design-section').forEach(function (section) { section.classList.remove('is-active'); });
+        designCategories.hidden = false;
+        designPanel.scrollTop = 0;
+      }
+      document.querySelectorAll('.design-category').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var category = button.getAttribute('data-design-category');
+          designSections.querySelectorAll('.design-section').forEach(function (section) {
+            section.classList.toggle('is-active', section.getAttribute('data-design-section') === category);
+          });
+          designCategories.hidden = true;
+          designSections.classList.add('is-open');
+          designPanel.scrollTop = 0;
+          designBack.focus();
+        });
+      });
+      designBack.addEventListener('click', function () {
+        closeDesignCategory();
+        document.querySelector('.design-category').focus();
       });
       var sourceBase = 'https://manju.ffenghao13.site';
       function numberedAssets(folder, count, pad) {
@@ -540,8 +576,11 @@
         if (open) {
           setVideoPanel(false);
           setProfilePanel(false);
+          closeDesignCategory();
           designPanel.scrollTop = 0;
           designClose.focus();
+        } else {
+          closeDesignCategory();
         }
       }
       videoLink.addEventListener('click', function (event) {
@@ -579,7 +618,8 @@
       });
       window.addEventListener('keydown', function (event) {
         if (event.key !== 'Escape') return;
-        if (document.body.classList.contains('design-open')) designClose.click();
+        if (document.body.classList.contains('design-open') && designSections.classList.contains('is-open')) designBack.click();
+        else if (document.body.classList.contains('design-open')) designClose.click();
         else if (document.body.classList.contains('profile-open')) profileClose.click();
         else if (document.body.classList.contains('video-open')) videoClose.click();
       });
